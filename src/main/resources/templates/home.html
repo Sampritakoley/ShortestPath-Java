@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="" th:href="@{css/style.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark" id="navbar-admin" style="background:#B29AB9;height:100px;margin-top:0px;">
+        <div class="container-fluid">
+        <img class="sh-logo" style="width:40px;height:40px" src="" th:src="@{/Image/shortestLogo.png}" alt="" >
+        <a class="navbar-brand" href="#">ShortestRoute</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item" style="margin:10px;">
+                    <button id="add-icon">Add Icon</button>
+                </li>
+                <li class="nav-item" style="margin:10px;">
+                    <button id="add-edge">Add Edge</button>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <div class="form-group" style="margin:30px;">
+                    <div id="form-class">
+                        <div style="margin:10px;">
+                            <label for="source">Source</label>
+                            <input type="text" id="source" name="src" >
+
+                            <label for="destination">Destination</label>
+                            <input type="text" id="destination" name="destination" >
+
+                            <button type="button" onclick="search(this)" id="search-edges"><i class="fas fa-magnifying-glass"></i></button>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div id="container"></div>
+<script src="@{/js/script.js}" th:src="@{/js/script.js}"></script>
+</body>
+</html>
