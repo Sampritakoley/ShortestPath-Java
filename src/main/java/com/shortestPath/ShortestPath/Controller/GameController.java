@@ -32,20 +32,11 @@ public class GameController {
         }
         String[] shotestDistance=gameService.shortestPath(arrayListOfArrayLists,searchModel.getSrc(),searchModel.getVertex());
         String destinationPath=shotestDistance[searchModel.getDestination()];
-        String[] allPath = destinationPath.split("|");
+        String[] allPath = destinationPath.split("\\|");
         ArrayList<Integer> edge=new ArrayList<>();
         for(int i=0;i<allPath.length-1;i++) {
-            if(Objects.equals(allPath[i], "|")){
-                continue;
-            }
             int end1 = Integer.parseInt(allPath[i]);
-            int end2=0;
-            if(Objects.equals(allPath[i+1], "|"))
-            {
-                end2 = Integer.parseInt(allPath[i + 2]);
-            }else{
-                end2 = Integer.parseInt(allPath[i + 1]);
-            }
+            int end2 = Integer.parseInt(allPath[i + 1]);
 
             for (ArrayList<Integer> arrayList : searchModel.getPaths()) {
                 if((arrayList.get(0)==end1 && arrayList.get(1)==end2) || (arrayList.get(0)==end2 && arrayList.get(1)==end1)){

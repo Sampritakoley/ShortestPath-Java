@@ -102,9 +102,9 @@ document.getElementById('add-icon').addEventListener('click', function() {
 
 // Handle adding edges
 document.getElementById('add-edge').addEventListener('click', function() {
-    const icon1Id = prompt('Enter the ID of the first icon:');
-    const icon2Id = prompt('Enter the ID of the second icon:');
-    const weightID = prompt('Enter the weight of the edge:');
+    const icon1Id = prompt('Enter the first icon to connect the edge:');
+    const icon2Id = prompt('Enter the second icon to connect the edge:');
+    const weightID = prompt('Enter the length of the edge:');
 
     const icon1 = document.querySelector(`.icon[data-id="${icon1Id}"]`);
     const icon2 = document.querySelector(`.icon[data-id="${icon2Id}"]`);
